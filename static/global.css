@@ -1,0 +1,89 @@
+.dark-theme {
+  color: var(--text-color-dark);
+  background-color: var(--background-color-dark);
+}
+
+.dark-theme a {
+  color: var(--text-color-dark);
+}
+
+.dark-theme #top {
+  background-color: var(--background-color-dark);
+}
+
+.light-theme {
+  color: var(--text-color-light);
+  background-color: var(--background-color-light);
+}
+
+.light-theme a {
+  color: var(--text-color-light);
+}
+
+.light-theme #top {
+  background-color: var(--background-color-light);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color-light);
+}
+
+a:hover {
+  color: var(--main-red);
+}
+
+p {
+  padding-top: 5px;
+}
+
+hr {
+  margin: 15px 0;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    var(--main-red-01),
+    var(--main-red),
+    var(--main-red-01)
+  );
+}
+
+.post hr {
+  margin: 15px 0;
+  border-top: 1px solid var(--main-red);
+  background-image: none;
+}
+
+.button {
+  padding: 5px 10px;
+}
+
+a.inline-link,
+.post-content a {
+  color: var(--main-red);
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 650px) {
+  body {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.emojione {
+  height: 1.5rem;
+}
