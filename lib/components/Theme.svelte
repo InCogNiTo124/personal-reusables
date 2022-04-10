@@ -1,11 +1,13 @@
 <script>
+  import { onMount } from 'svelte';
   import { browser } from '$app/env';
+
   import dark from '$slib/images/dark.png';
   import light from '$slib/images/light.png';
-  import { onMount } from 'svelte';
-  import { theme } from '$slib/stores/theme_store';
 
+  import { theme } from '$slib/stores/theme_store';
   import { LIGHT, DARK, storageTheme } from '$slib/utils';
+
   let val = LIGHT;
   onMount(() => {
     val = localStorage.getItem(storageTheme) || LIGHT;
@@ -22,7 +24,7 @@
 <img
   on:click={toggleTheme}
   src={val === LIGHT ? dark : light}
-  alt={`${val} icon`}
+  alt="Toggle theme"
 />
 
 <style scoped>
