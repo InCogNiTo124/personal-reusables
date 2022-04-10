@@ -3,7 +3,10 @@
   import { browser } from '$app/env';
   import { BLANK, LIGHT, storageTheme } from '$slib/utils';
   import { theme } from '$slib/stores/theme_store';
-  export let url, title, data;
+
+  export let url: string;
+  export let urlTarget: string = BLANK;
+  export let title: string;
 
   let themeValue = LIGHT;
 
@@ -21,20 +24,14 @@
 <div class="section {themeValue}">
   <h3>
     {#if url}
-      <a href={url} target={BLANK}>
+      <a href={url} target={urlTarget} sveltekit:prefetch>
         <div>{title}</div>
       </a>
     {:else}
       <div>{title}</div>
     {/if}
   </h3>
-  <div>
-    {#each data as paragraph}
-      <p>
-        {@html paragraph}
-      </p>
-    {/each}
-  </div>
+  <slot name="body" />
 </div>
 
 <style scoped lang="css">
@@ -53,15 +50,15 @@
   .section h3 div {
     padding: 5px;
     margin-bottom: 10px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--text-color-light);
   }
 
   .dark-theme h3 div {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--text-color-dark);
   }
 
   .section h3 div:hover {
-    border-color: rgba(218, 0, 0, 1);
+    border-color: var(--main-red);
   }
 
   .section div {
