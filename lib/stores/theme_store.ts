@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store';
 import { storageTheme, LIGHT } from '$slib/utils';
 
-const createLocalStore = (key, startValue) => {
+const createLocalStore = (key: string, startValue: string) => {
   const {
     subscribe,
     set,
