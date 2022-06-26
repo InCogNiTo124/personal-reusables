@@ -4,7 +4,7 @@
   import { BLANK, LIGHT, storageTheme } from '$slib/utils';
   import { theme } from '$slib/stores/theme_store';
 
-  export let url: string = '';
+  export let url = '';
   export let urlTarget: string = BLANK;
   export let title: string;
 

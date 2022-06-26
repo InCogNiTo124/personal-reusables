@@ -1,8 +1,8 @@
 <script lang="ts">
   import { INLINE_CLASS } from '$slib/utils';
 
-  export let page: number = 1;
-  export let showNext: boolean = true;
+  export let page = 1;
+  export let showNext = true;
 </script>
 
 <div id="pagination">

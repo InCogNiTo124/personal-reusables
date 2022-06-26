@@ -6,9 +6,9 @@
   import Pager from '$slib/components/Filters/Pager.svelte';
 
   export let sections: Array<any> = [];
-  export let noSections: boolean = true;
-  export let lastPage: boolean = false;
-  export let page: number = 1;
+  export let noSections = true;
+  export let lastPage = false;
+  export let page = 1;
 
   export let Section: any;
 </script>
