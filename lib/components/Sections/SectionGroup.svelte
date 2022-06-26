@@ -28,7 +28,9 @@
     {/if}
   {/each}
 
-  <Pager {page} showNext={!lastPage} />
+  {#if page}
+    <Pager {page} showNext={!lastPage} />
+  {/if}
 </div>
 
 <style>
