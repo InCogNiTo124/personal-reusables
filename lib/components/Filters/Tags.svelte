@@ -1,4 +1,9 @@
 <script lang="ts">
+  interface Tag {
+    id: number;
+    tag_name: string;
+  }
+  
   export let tags: Tag[] = [];
 </script>
 
