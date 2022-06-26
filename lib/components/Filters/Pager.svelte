@@ -14,11 +14,11 @@
     </div>
   {/if}
   {#if showNext}
-     <div class="wrapper">
-       <a class={INLINE_CLASS} href={`?page=${page + 1}`}>
-         <div>Next</div>
-       </a>
-     </div>
+    <div class="wrapper">
+      <a class={INLINE_CLASS} href={`?page=${page + 1}`}>
+        <div>Next</div>
+      </a>
+    </div>
   {/if}
 </div>
 

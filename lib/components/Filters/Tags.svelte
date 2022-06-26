@@ -28,11 +28,11 @@
 
     margin-bottom: 0.5rem;
   }
-  
+
   .tag-wrapper:hover {
     background-color: var(--main-red-button-hover);
   }
-  
+
   .post-tag {
     text-transform: uppercase;
     font-size: 0.75rem;

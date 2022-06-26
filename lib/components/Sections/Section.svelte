@@ -46,7 +46,7 @@
   .section h3 {
     width: max-content;
   }
-  
+
   .section h3 div {
     padding: 5px;
     margin-bottom: 10px;
