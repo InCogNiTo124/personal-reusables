@@ -1,16 +1,17 @@
 <script>
   import { onMount } from 'svelte';
   import { browser } from '$app/env';
+  import Cookies from 'js-cookie';
 
   import dark from '$slib/images/dark.png';
   import light from '$slib/images/light.png';
 
   import { theme } from '$slib/stores/theme_store';
-  import { LIGHT, DARK, storageTheme } from '$slib/utils';
+  import { LIGHT, DARK, COOKIE_KEY_THEME } from '$slib/utils';
 
   let val = LIGHT;
   onMount(() => {
-    val = localStorage.getItem(storageTheme) || LIGHT;
+    val = Cookies.get(COOKIE_KEY_THEME) || LIGHT;
   });
 
   function toggleTheme() {

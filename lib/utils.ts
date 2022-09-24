@@ -15,9 +15,9 @@ export const LIGHT = 'light-theme';
 export const DARK = 'dark-theme';
 
 /**
- * Local storage keys
+ * Cookie and local storage keys
  */
-export const storageTheme = 'msmetko/theme';
+export const COOKIE_KEY_THEME = 'msmetko/theme';
 
 /**
  * Other constants

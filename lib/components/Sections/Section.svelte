@@ -1,7 +1,8 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { browser } from '$app/env';
-  import { BLANK, LIGHT, storageTheme } from '$slib/utils';
+  import Cookies from 'js-cookie';
+  import { BLANK, LIGHT, COOKIE_KEY_THEME } from '$slib/utils';
   import { theme } from '$slib/stores/theme_store';
 
   export let url = '';
@@ -16,7 +17,7 @@
         themeValue = newval;
       });
 
-      themeValue = localStorage.getItem(storageTheme) || LIGHT;
+      themeValue = Cookies.get(COOKIE_KEY_THEME) || LIGHT;
     }
   });
 </script>
