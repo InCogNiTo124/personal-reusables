@@ -16,7 +16,7 @@ const createCookie = (key: string, startValue: string) => {
       }
 
       subscribe((current) => {
-        Cookies.set(key, current);
+        Cookies.set(key, current, { domain: 'msmetko.xyz' });
       });
     },
   };
