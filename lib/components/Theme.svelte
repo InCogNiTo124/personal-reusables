@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { browser } from '$app/env';
+  import { browser } from '$app/environment';
   import Cookies from 'js-cookie';
 
   import dark from '$slib/images/dark.png';

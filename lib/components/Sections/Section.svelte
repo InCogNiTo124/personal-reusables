@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { browser } from '$app/env';
+  import { browser } from '$app/environment';
   import Cookies from 'js-cookie';
   import { BLANK, LIGHT, COOKIE_KEY_THEME } from '$slib/utils';
   import { theme } from '$slib/stores/theme_store';
@@ -25,7 +25,7 @@
 <div class="section {themeValue}">
   <h3>
     {#if url}
-      <a href={url} target={urlTarget} sveltekit:prefetch>
+      <a href={url} target={urlTarget} data-sveltekit-prefetch>
         <div>{title}</div>
       </a>
     {:else}
