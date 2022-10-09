@@ -3,11 +3,8 @@
   --main-red-01: rgba(218, 0, 0, 0.1);
   --main-red-button-hover: rgb(141, 0, 0);
 
-  --text-color-dark: rgb(217, 217, 217);
-  --background-color-dark: #181818;
-
-  --text-color-light: black;
-  --background-color-light: white;
+  --text-color: black;
+  --background-color: white;
 
   --caption-grey: rgb(117, 117, 117);
 }

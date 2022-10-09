@@ -1,32 +1,14 @@
 .dark-theme {
-  color: var(--text-color-dark);
-  background-color: var(--background-color-dark);
-}
+  --text-color: rgb(217, 217, 217);
+  --background-color: #181818;
 
-.dark-theme a {
-  color: var(--text-color-dark);
-}
-
-.dark-theme #top {
-  background-color: var(--background-color-dark);
-}
-
-.light-theme {
-  color: var(--text-color-light);
-  background-color: var(--background-color-light);
-}
-
-.light-theme a {
-  color: var(--text-color-light);
-}
-
-.light-theme #top {
-  background-color: var(--background-color-light);
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 a {
   text-decoration: none;
-  color: var(--text-color-light);
+  color: var(--text-color);
 }
 
 a:hover {
