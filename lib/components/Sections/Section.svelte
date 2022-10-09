@@ -51,11 +51,11 @@
   .section h3 div {
     padding: 5px;
     margin-bottom: 10px;
-    border-bottom: 1px solid var(--text-color-light);
+    border-bottom: 1px solid var(--text-color);
   }
 
   .dark-theme h3 div {
-    border-bottom: 1px solid var(--text-color-dark);
+    border-bottom: 1px solid var(--text-color);
   }
 
   .section h3 div:hover {
