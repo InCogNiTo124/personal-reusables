@@ -1,8 +1,12 @@
 <script lang="ts">
   import { INLINE_CLASS } from '$slib/utils';
 
-  export let page = 1;
-  export let showNext = true;
+  interface Props {
+    page?: number;
+    showNext?: boolean;
+  }
+
+  let { page = 1, showNext = true }: Props = $props();
 </script>
 
 <div id="pagination">

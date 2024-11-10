@@ -9,7 +9,7 @@
   import { theme } from '$slib/stores/theme_store';
   import { LIGHT, DARK, COOKIE_KEY_THEME } from '$slib/utils';
 
-  let val = LIGHT;
+  let val = $state(LIGHT);
   onMount(() => {
     val = Cookies.get(COOKIE_KEY_THEME) || LIGHT;
   });
@@ -23,7 +23,7 @@
 </script>
 
 <img
-  on:click={toggleTheme}
+  onclick={toggleTheme}
   src={val === LIGHT ? dark : light}
   alt="Toggle theme"
 />

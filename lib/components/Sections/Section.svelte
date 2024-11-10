@@ -5,11 +5,21 @@
   import { BLANK, LIGHT, COOKIE_KEY_THEME } from '$slib/utils';
   import { theme } from '$slib/stores/theme_store';
 
-  export let url = '';
-  export let urlTarget: string = BLANK;
-  export let title: string;
+  interface Props {
+    url?: string;
+    urlTarget?: string;
+    title: string;
+    body?: import('svelte').Snippet;
+  }
 
-  let themeValue = LIGHT;
+  let {
+    url = '',
+    urlTarget = BLANK,
+    title,
+    body
+  }: Props = $props();
+
+  let themeValue = $state(LIGHT);
 
   onMount(() => {
     if (browser) {
@@ -32,7 +42,7 @@
       <div>{title}</div>
     {/if}
   </h3>
-  <slot name="body" />
+  {@render body?.()}
 </div>
 
 <style scoped lang="css">

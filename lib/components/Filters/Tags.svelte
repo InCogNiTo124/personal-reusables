@@ -4,7 +4,11 @@
     tag_name: string;
   }
   
-  export let tags: Tag[] = [];
+  interface Props {
+    tags?: Tag[];
+  }
+
+  let { tags = [] }: Props = $props();
 </script>
 
 <div class="tag-group">
